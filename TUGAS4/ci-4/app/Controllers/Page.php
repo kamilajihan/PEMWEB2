@@ -27,8 +27,8 @@ class Page extends BaseController
         $data = [
             'title' => 'Contact | Unipdu Press',
             'alamat' => [
-                ['tipe' => 'Rumah', 'alamat' => 'Dsn. Ngemplak Selatan', 'kota' => 'Mojoagung-Jombang'],
-                ['tipe' => 'Kantor', 'alamat' => 'Unipdu', 'kota' => 'Peterongan-Jombang']
+                ['tipe' => 'Rumah', 'alamat' => 'Dsn. Ngemplak Selatan', 'kota' => 'Jombang'],
+                ['tipe' => 'Kantor', 'alamat' => 'Unipdu', 'kota' => 'Jombang']
             ]
         ];
         return view('page/contact', $data);
