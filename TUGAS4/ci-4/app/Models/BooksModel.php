@@ -10,7 +10,10 @@ class BooksModel extends Model
     protected $primaryKey = 'id';
     protected $useTimestamps = true;
 
-    public function getBuku($slug = false) {
+    protected $allowedFields = ['judul', 'slug', 'penulis', 'sampul'];
+
+    public function getBuku($slug = false)
+    {
         if ($slug == false) {
             return $this->findAll();
         }

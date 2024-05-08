@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 04, 2024 at 05:28 PM
+-- Generation Time: May 08, 2024 at 04:36 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -43,8 +43,9 @@ CREATE TABLE `books` (
 --
 
 INSERT INTO `books` (`id`, `judul`, `slug`, `penulis`, `penerbit`, `sampul`, `created_at`, `updated_at`) VALUES
-(1, 'Love Yourself', 'loveyourself', 'Kim Namjoon of BTS', 'Gramedia', 'loveyourself.jpeg', '2024-04-04 21:06:17', '2024-04-04 21:03:54'),
-(2, 'Skool Luv Affair', 'skoolluvaffair', 'Kim Namjoon of BTS', 'Gramedia', 'skoolluvaffair.jpeg', '2024-04-04 16:18:35', '2024-04-04 16:18:35');
+(1, 'Love Yourself', 'loveyourself', 'Kim Namjoon of BTS', 'Bighit Ent.', 'loveyourself.jpeg', '2024-04-04 21:06:17', '2024-04-04 21:03:54'),
+(2, 'Skool Luv Affair', 'skoolluvaffair', 'Kim Namjoon of BTS', 'Bighit Ent.', 'skoolluvaffair.jpeg', '2024-04-04 16:18:35', '2024-04-04 16:18:35'),
+(3, 'Dark & Wild', 'dark&wild', 'Kim Namjoon of BTS', 'Bighit Ent.', 'dark&wild.jpeg', '2024-05-08 13:09:17', '2024-05-08 13:09:17');
 
 --
 -- Indexes for dumped tables
@@ -64,7 +65,7 @@ ALTER TABLE `books`
 -- AUTO_INCREMENT for table `books`
 --
 ALTER TABLE `books`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

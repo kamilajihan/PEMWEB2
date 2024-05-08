@@ -7,4 +7,4 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Page::index');
 
-$routes->get('/books/(:segment)', 'Books::detail/$1');
+//$routes->get('/books/(:segment)', 'Books::detail/$1');
