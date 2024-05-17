@@ -41,17 +41,53 @@ class Books extends BaseController
 
     public function create()
     {
-
         $data = [
-            'title' => 'Detail Buku'
+            'title' => 'Form Tambah Buku',
+            'validation' => session()->getFlashdata('validation') ?? \Config\Services::validation(),
         ];
-
         return view('books/create', $data);
+    }
+
+    public function delete($id)
+    {
+        $this->bukuModel->delete($id);
+        session()->setFlashdata('pesan', 'Data berhasil dihapus');
+        return redirect()->to('/books');
     }
 
     public function save()
     {
         //$this->request->getVar('judul");
+        if (!$this->validate([
+            'judul' => [
+                'rules' => 'required|is_unique[books.judul]',
+                'errors' => [
+                    'required' => '{field} buku harus di isi',
+                    'is_unique' => '{field} buku sudah terdaftar'
+                ]
+            ],
+            'penulis' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} buku harus di isi'
+                ]
+            ],
+            'penerbit' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} buku harus di isi'
+                ]
+            ],
+            'sampul' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} buku harus di isi'
+                ]
+            ]
+        ])) {
+            session()->setFlashdata('validation', \Config\Services::validation());
+            return redirect()->to('/books/create')->withInput();
+        }
 
         $slug = url_title($this->request->getVar('judul'), '-', true);
         $this->bukuModel->save([

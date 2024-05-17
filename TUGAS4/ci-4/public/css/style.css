@@ -2,6 +2,6 @@
     width: 100px;
 }
 
-.table > tbody >tr > * {
+.table > tbody > tr > * {
     vertical-align: middle;
 }
