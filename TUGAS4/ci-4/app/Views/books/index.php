@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <?php if (session()->getFlashdata('pesan')) : ?>
+            <?php if (session()->getFlashdata('pesan')): ?>
                 <div class="alert alert-success" role="alert">
                     <?= session()->getFlashdata('pesan'); ?>
                 </div>
@@ -22,7 +22,7 @@
                 </thead>
                 <tbody>
                     <?php $i = 1 ?>
-                    <?php foreach ($buku as $b) : ?>
+                    <?php foreach ($buku as $b): ?>
                         <tr>
                             <th scope="row">
                                 <?= $i++; ?>
